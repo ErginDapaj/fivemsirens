@@ -1,3 +1,4 @@
+
 .container {
   padding: 0 2rem;
 }
@@ -129,4 +130,38 @@
   .logo img {
     filter: invert(1);
   }
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: 20px;
+  overflow: hidden;
+  transition: 0.2s;
+  margin: 10px;
+}
+
+.one {
+  color: #0088ff;
+  border: 2px solid #0088ff;
+}
+.one:hover {
+  color: #255784;
+  background: #0088ff;
+  box-shadow: 0 0 10px #0088ff, 0 0 40px #0088ff, 0 0 80px #0088ff;
+}
+
+
+.three {
+  color: #ff0000;
+  border: 2px solid #ff0000;
+}
+.three:hover {
+  color: #842525;
+  background: #ff0000;
+  box-shadow: 0 0 10px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000;
 }

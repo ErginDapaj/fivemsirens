@@ -25,6 +25,9 @@ export default function Home() {
           // Controls the number of snowflakes that are created (default 150)
           snowflakeCount={200}
         />
+        <a href="" className={`${styles.button} ${styles.one}`} target="_blank">Leo</a>
+      <a href="" className={`${styles.button} ${styles.three}`} target="_blank">Fire</a>
+
         <div className={styles.grid}>
           <a href="https://discord.gg/ewdQPc9G4m" className={styles.card}>
             <h2>Join Our Discord &rarr;</h2>
