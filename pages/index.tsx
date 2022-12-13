@@ -21,13 +21,10 @@ export default function Home() {
           Working day and night on this page!
           <code className={styles.code}>2 Day Streak</code>
         </p>
-        <div style={{
-          position: 'fixed',
-          width: '100vw',
-          height: '100vh',
-        }}>
-          <Snowfall />
-        </div>
+        <Snowfall
+          // Controls the number of snowflakes that are created (default 150)
+          snowflakeCount={200}
+        />
         <div className={styles.grid}>
           <a href="https://discord.gg/ewdQPc9G4m" className={styles.card}>
             <h2>Join Our Discord &rarr;</h2>
