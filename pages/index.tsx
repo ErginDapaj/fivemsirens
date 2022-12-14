@@ -5,7 +5,15 @@ import Snowfall from 'react-snowfall'
 
 export default function Home() {
   return (
+    
     <div className={styles.container}>
+       <Snowfall
+          // Controls the number of snowflakes that are created (default 150)
+          snowflakeCount={200}
+          style={{
+            position: 'fixed',
+          }}
+        />
       <Head>
         <title>FivemSirens Coming Soon</title>
         <meta name="description" content="New Fivem Site Coming Soon" />
@@ -21,13 +29,12 @@ export default function Home() {
           Working day and night on this page!
           <code className={styles.code}>2 Day Streak</code>
         </p>
-        <Snowfall
-          // Controls the number of snowflakes that are created (default 150)
-          snowflakeCount={200}
-        />
+        {/* Made the div here just for the buttons don't delete it */}
+       <div>
         <a href="" className={`${styles.button} ${styles.one}`} target="_blank">Leo</a>
-      <a href="" className={`${styles.button} ${styles.three}`} target="_blank">Fire</a>
-
+        <a href="" className={`${styles.button} ${styles.three}`} target="_blank">Fire</a>
+        </div>
+        <br></br><br></br>
         <div className={styles.grid}>
           <a href="https://discord.gg/ewdQPc9G4m" className={styles.card}>
             <h2>Join Our Discord &rarr;</h2>
