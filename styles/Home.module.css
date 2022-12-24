@@ -77,7 +77,7 @@
   max-width: 800px;
 }
 
-.card {
+.card2 {
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
@@ -89,19 +89,19 @@
   max-width: 300px;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
+.card2:hover,
+.card2:focus,
+.card2:active {
   color: #0070f3;
   border-color: #0070f3;
 }
 
-.card h2 {
+.card2 h2 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
 }
 
-.card p {
+.card2 p {
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -120,7 +120,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .card,
+  .card2,
   .footer {
     border-color: #222;
   }
@@ -165,4 +165,204 @@
   color: #842525;
   background: #ff0000;
   box-shadow: 0 0 10px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000;
+}
+
+
+/* The cards used to downloand the packages */
+
+body .container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px 0;
+  z-index: 42;
+}
+
+body .container2 .card {
+  position: relative;
+  min-width: 320px;
+  height: 320px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 30px;
+  transition: 0.5s;
+}
+
+body .container2 .card:nth-child(1) .box .content a {
+  background: #2196f3;
+}
+
+body .container2 .card:nth-child(2) .box .content a {
+  background: red;
+}
+
+body .container2 .card:nth-child(3) .box .content a {
+  background: #23c186;
+}
+
+body .container2 .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #2a2b2f;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+body .container2 .card .box:hover {
+  transform: translateY(-50px);
+}
+
+body .container2 .card .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+body .container2 .card .box .content {
+  padding: 20px;
+  text-align: center;
+}
+
+body .container2 .card .box .content h2 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+body .container2 .card .box .content h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  z-index: 1;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+
+body .container2 .card .box .content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+body .container2 .card .box .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+body .container2 .card .box .content a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+
+/* The button of the youtube modal  I NEED THE FUCKING BOOTSTRAP*/
+ 
+
+.video_btn {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  right: 12%;
+  width: 65px;
+  height: 65px;
+  background: #fff;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-animation: pulse 1s linear infinite;
+  animation: pulse 1s linear infinite;
+  cursor: pointer;
+}
+
+.video_btn a {
+    font-size: 15px;
+    position: relative;
+    top: 25px;
+    right: 5px;
+    color: #043381;
+}
+
+.video_btn a span {
+  position: absolute;
+  border-left: 12px solid #000fff;
+  border-top: 8px solid #fff;
+  border-bottom: 8px solid #fff;
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 10px rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 10px rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1); }
+  100% {
+    -webkit-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 100px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 100px rgba(255, 255, 255, 0); }
+}
+
+/* .vedio-btn i {
+  color: #000cca;
+} */
+
+.close_btn {
+  position: absolute;
+  top: 14%;
+  right: 20%;
+  padding: 10px;
+  background: transparent;
+  border: 0;
+  font-size: 20px;
+  color: #bebbbb;
+  cursor: pointer;
+}
+.modal_container.show_modal {
+  display: block;
+}
+.modal_container {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  animation-name: modalopen;
+  animation-duration: 1s;
 }
