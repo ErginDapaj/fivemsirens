@@ -3,23 +3,46 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Snowfall from "react-snowfall";
 import Script from "next/script";
-import React, { useRef, useState } from "react";
-import { useClickAway } from "react-use";
-
+import React, { useRef, useState, useEffect } from "react";
+import CardComponent from "../components/CardComponent";
 // import the icons you need
 export default function Home() {
-  const [open, setOpen] = useState(false);
-  const [open1, setOpen1] = useState(false);
-  const ref = useRef(null);
-  const ref1 = useRef(null);
-  useClickAway(ref, () => {
-    setOpen(!open);
-  });
-  useClickAway(ref1, () => {
-    setOpen1(!open1);
-  });
+  const json = [
+    {
+      id: "1",
+      name: "Leo",
+      src: "//www.youtube.com/embed/BsH8jqxpcno",
+      category: "leo"
+    },
+    {
+      id: "2",
+      name: "Leo",
+      src: "//www.youtube.com/embed/50BT55tehB8",
+      category: "leo"
+    },
+    {
+      id: "3",
+      name: "Leo",
+      src: "//www.youtube.com/embed/WTzxlajXyqs",
+      category: "leo"
+    },
+    {
+      id: "4",
+      name: "Fire",
+      src: "//www.youtube.com/embed/Lx8xPthMi9c",
+      category: "fire"
+    }
+  ];
   return (
     <div className={styles.container}>
+      
+      
+      <Head>
+
+        <title>Fivem Sirens</title>
+        <meta name="description" content="New Fivem Site Coming Soon" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Snowfall
         // Controls the number of snowflakes that are created (default 150)
         snowflakeCount={200}
@@ -27,20 +50,15 @@ export default function Home() {
           position: "fixed",
         }}
       />
-      <Head>
-        <title>FivemSirens Coming Soon</title>
-        <meta name="description" content="New Fivem Site Coming Soon" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          <label className={styles.lol}>Coming</label>{" "}
-          <a href="https://discord.gg/ewdQPc9G4m">Soon!</a>
+          <label className={styles.lol}>Fivem</label>{" "}
+          <a href="https://discord.gg/ewdQPc9G4m">Sirens</a>
         </h1>
 
         <p className={styles.description}>
-          Working day and night on this page!
-          <code className={styles.code}>2 Day Streak</code>
+          This is still worked on, don't mind the mess!
+          <code className={styles.code}>Nextjs</code>
         </p>
         {/* Made the div here just for the buttons don't delete it */}
         <div>
@@ -59,61 +77,12 @@ export default function Home() {
             Fire
           </a>
         </div>
-        <div className={styles.container2}>
-          <div className={styles.card}>
-            <div className={styles.box}>
-              <div className={styles.content}>
-                <h2>01</h2>
-                <h3>leofile_0001</h3>
-                <>
-                  <a onClick={() => setOpen(!open)}>Demo Video</a>
-                  <br />
-                  {open && (
-                    <div className={styles.modal_container}>
-                      <div ref={ref} className={styles.modal}>
-                        <iframe
-                          width="800"
-                          height="400"
-                          frameBorder="0"
-                          allowFullScreen
-                          src="//www.youtube.com/embed/ccW_OYApEZE"
-                        ></iframe>
-                      </div>
-                    </div>
-                  )}
-                </>
-                <a href="#">Download</a>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.card}>
-            <div className={styles.box}>
-              <div className={styles.content}>
-                <h2>02</h2>
-                <h3>firefile_0001</h3>
-                <>
-                  <a onClick={() => setOpen1(!open1)}>Demo Video</a>
-                  <br />
-                  {open && (
-                    <div className={styles.modal_container}>
-                      <div ref={ref1} className={styles.modal}>
-                        <iframe
-                          width="800"
-                          height="400"
-                          frameBorder="0"
-                          allowFullScreen
-                          src="//www.youtube.com/embed/UougN78TlDM"
-                        ></iframe>
-                      </div>
-                    </div>
-                  )}
-                </>
-                <a href="#">Download</a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className={styles.container2}>
+        {json.map((item) => (
+            <CardComponent {...item} key={item.id}   />
+          ))}
+         
+      </div> 
         <br></br>
         <br></br>
         <div className={styles.grid}>
