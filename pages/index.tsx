@@ -57,7 +57,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          This is still worked on, don't mind the mess!
+          This is still worked on, don&apos;t mind the mess!
           <code className={styles.code}>Nextjs</code>
         </p>
         {/* Made the div here just for the buttons don't delete it */}
